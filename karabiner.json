@@ -1426,33 +1426,48 @@
                         ]
                     },
                     {
-                        "description": "Map escape to hyper when held",
+                        "description": "Open Google Chrome",
                         "manipulators": [
                             {
+                                "type": "basic",
                                 "from": {
-                                    "key_code": "escape",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "f"
+                                        },
+                                        {
+                                            "key_code": "d"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [
+                                "to": [
                                     {
-                                        "key_code": "escape"
+                                        "shell_command": "open '/Applications/Google Chrome.app/'"
                                     }
-                                ],
-                                "to_if_held_down": [
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Open VSCode",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "f"
+                                        },
+                                        {
+                                            "key_code": "s"
+                                        }
+                                    ]
+                                },
+                                "to": [
                                     {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                        "shell_command": "open '/Applications/Visual Studio Code.app'"
                                     }
-                                ],
-                                "type": "basic"
+                                ]
                             }
                         ]
                     }
